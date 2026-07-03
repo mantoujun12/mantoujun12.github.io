@@ -1,3 +1,5 @@
+/* ==================== 基础样式 ==================== */
+
 html {
     scroll-behavior: smooth;
 }
@@ -20,6 +22,8 @@ a {
 a:hover {
     color: #2a4ad4;
 }
+
+/* ==================== 导航栏 ==================== */
 
 header {
     display: flex;
@@ -64,6 +68,26 @@ header {
     width: 100%;
 }
 
+/* 汉堡菜单图标 */
+.nav-hamburger {
+    display: none;
+    font-size: 1.4rem;
+    cursor: pointer;
+    color: #333;
+    padding: 4px;
+}
+
+/* 侧边栏遮罩 */
+.nav-overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+}
+
+/* ==================== 主内容区 ==================== */
+
 article {
     max-width: 1000px;
     margin: 0 auto;
@@ -71,6 +95,8 @@ article {
     flex: 1;
     text-align: center;
 }
+
+/* ==================== 卡片 ==================== */
 
 .cardzone {
     display: grid;
@@ -122,26 +148,24 @@ article {
     color: white;
 }
 
+/* ==================== 页脚 ==================== */
+
 footer {
     text-align: center;
     background-color: rgb(245, 245, 245);
     padding: 20px 0;
 }
 
-/* 移动端侧边栏导航 */
-.nav-hamburger {
-    display: none;
-    font-size: 1.4rem;
-    cursor: pointer;
-    color: #333;
-    padding: 4px;
-}
+/* ==================== 移动端适配 ==================== */
 
 @media (max-width: 768px) {
+
+    /* 汉堡菜单 */
     .nav-hamburger {
         display: block;
     }
 
+    /* 标题居中 */
     .nav-title {
         position: absolute;
         left: 50%;
@@ -152,6 +176,7 @@ footer {
         position: relative;
     }
 
+    /* 侧边栏 */
     nav {
         position: fixed;
         top: 0;
@@ -187,26 +212,20 @@ footer {
         display: none;
     }
 
-    /* 侧边栏打开时的遮罩 */
     #nav-toggle:checked~.nav-overlay {
         display: block;
     }
 
+    /* 卡片 2 列 */
     .cardzone {
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
 @media (max-width: 480px) {
+
+    /* 卡片 1 列 */
     .cardzone {
         grid-template-columns: 1fr;
     }
-}
-
-.nav-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.3);
-    z-index: 99;
 }
