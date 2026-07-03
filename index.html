@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mantoujun12's Website</title>
+    <link rel="stylesheet" href="./style/style.css">
     <link href="https://fontsapi.zeoseven.com/161/main/result.css" onload="this.rel='stylesheet'" rel="preload"
         as="style" crossorigin />
     <noscript>
@@ -12,105 +13,73 @@
     </noscript>
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-        html {
-            scroll-behavior: smooth;
-        }
 
-        body {
-            font-family: "Sarasa Gothic SC";
-            font-weight: normal;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
-
-        a {
-            color: #4a6cf7;
-            text-decoration: none;
-            transition: ease 250ms;
-        }
-
-        a:hover {
-            color: #2a4ad4;
-        }
-
-        header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            padding: 0 24px;
-            height: 56px;
-        }
-
-        .nav-title {
-            font-size: 1.2rem;
-            font-weight: bold;
-        }
-
-        .nav-btns {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-
-        .nav-btns a {
-            color: #333;
-            position: relative;
-        }
-
-        .nav-btns a::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background: #4a6cf7;
-            transition: width 0.25s ease;
-        }
-
-        .nav-btns a:hover {
-            color: #4a6cf7;
-        }
-
-        .nav-btns a:hover::after {
-            width: 100%;
-        }
-
-        article {
-            text-align: center;
-            padding: 40px 24px;
-            flex: 1;
-        }
-
-        footer {
-            text-align: center;
-            background-color: rgb(245, 245, 245);
-            padding: 20px 0;
-        }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="nav-title"><i class="fa-solid fa-house"></i>网站标题</div>
+        <input type="checkbox" id="nav-toggle" hidden>
+        <label for="nav-toggle" class="nav-hamburger"><i class="fa-solid fa-bars"></i></label>
+        <div class="nav-title"><i class="fa-solid fa-house"></i>个人网站</div>
         <nav>
             <div class="nav-btns">
                 <a href="">首页</a>
                 <a href="">文章</a>
                 <a href="">图文</a>
                 <a href="">分区</a>
-                <a href="https://github.com/mantoujun12/mantoujun12.github.io"><i class="fa-brands fa-github"></i></a>
+                <a href="https://github.com/mantoujun12/mantoujun12.github.io" title="此 GitHub 项目"><i
+                        class="fa-brands fa-github"></i></a>
             </div>
         </nav>
+        <label for="nav-toggle" class="nav-overlay"></label>
     </header>
     <article>
         <h1>首页</h1>
         <p>只是一个个人网站的首页，你可以寻找一些文章、图文等内容</p>
+        <h2>文章</h2>
+        <section class="cardzone">
+            <div class="card">
+                <div class="card-title">卡片标题</div>
+                <div class="card-content">卡片内容</div>
+                <div class="card-btn"><a href="">按钮</a></div>
+            </div>
+            <div class="card">
+                <div class="card-title">卡片标题</div>
+                <div class="card-content">卡片内容</div>
+                <div class="card-btn"><a href="">按钮</a></div>
+            </div>
+            <div class="card">
+                <div class="card-title">卡片标题</div>
+                <div class="card-content">卡片内容</div>
+                <div class="card-btn"><a href="">按钮</a></div>
+            </div>
+            <div class="card">
+                <div class="card-title">卡片标题</div>
+                <div class="card-content">卡片内容</div>
+                <div class="card-btn"><a href="">按钮</a></div>
+            </div>
+            <div class="card">
+                <div class="card-title">卡片标题</div>
+                <div class="card-content">卡片内容</div>
+                <div class="card-btn"><a href="">按钮</a></div>
+            </div>
+            <div class="card">
+                <div class="card-title">卡片标题</div>
+                <div class="card-content">卡片内容</div>
+                <div class="card-btn"><a href="">按钮</a></div>
+            </div>
+        </section>
     </article>
     <footer>
-        <p>MIT &copy; <a href="https://github.com/mantoujun12">mantoujun12</a></p>
+        <p>MIT &copy; <a href="https://github.com/mantoujun12" title="访问 Github 主页">mantoujun12</a></p>
+        <span>
+            <a href="https://www.douyin.com/user/MS4wLjABAAAAtmK1B7sTyq88WZrWQltiwKoROqN0xcJsDpiHU1rT4c1Gz54z8Scuxw0eLG6bMN0-"
+                title="抖音主页"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="https://space.bilibili.com/3546769845651673" title="BiliBili 主页"><i
+                    class="fa-brands fa-bilibili"></i></a>
+            <a href="https://github.com/mantoujun12/mantoujun12.github.io"><i class="fa-brands fa-github"></i></a>
+        </span>
     </footer>
 </body>
 
