@@ -5,15 +5,96 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>mantoujun12's Website</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fontsapi.zeoseven.com/161/main/result.css" onload="this.rel='stylesheet'" rel="preload"
+        as="style" crossorigin />
+    <noscript>
+        <link rel="stylesheet" href="https://fontsapi.zeoseven.com/161/main/result.css" />
+    </noscript>
+    <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
+        html {
+            scroll-behavior: smooth;
+        }
 
+        body {
+            font-family: "Sarasa Gothic SC";
+            font-weight: normal;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        a {
+            color: #4a6cf7;
+            text-decoration: none;
+            transition: ease 250ms;
+        }
+
+        a:hover {
+            color: #2a4ad4;
+        }
+
+        header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 24px;
+            height: 56px;
+        }
+
+        .nav-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+        }
+
+        .nav-btns {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .nav-btns a {
+            color: #333;
+            position: relative;
+        }
+
+        .nav-btns a::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #4a6cf7;
+            transition: width 0.25s ease;
+        }
+
+        .nav-btns a:hover {
+            color: #4a6cf7;
+        }
+
+        .nav-btns a:hover::after {
+            width: 100%;
+        }
+
+        article {
+            text-align: center;
+            padding: 40px 24px;
+            flex: 1;
+        }
+
+        footer {
+            text-align: center;
+            background-color: rgb(245, 245, 245);
+            padding: 20px 0;
+        }
     </style>
 </head>
 
 <body>
     <header>
-        <div class="nav-title">网站标题</div>
+        <div class="nav-title"><i class="fa-solid fa-house"></i>网站标题</div>
         <nav>
             <div class="nav-btns">
                 <a href="">首页</a>
@@ -24,10 +105,13 @@
             </div>
         </nav>
     </header>
-    <div class="main">
-        <h1>Website Home</h1>
-        <p>This is a Website's Home,You can find some contents.</p>
-    </div>
+    <article>
+        <h1>首页</h1>
+        <p>只是一个个人网站的首页，你可以寻找一些文章、图文等内容</p>
+    </article>
+    <footer>
+        <p>MIT &copy; <a href="https://github.com/mantoujun12">mantoujun12</a></p>
+    </footer>
 </body>
 
 </html>
