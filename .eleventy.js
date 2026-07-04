@@ -62,9 +62,10 @@ module.exports = function (eleventyConfig) {
         </picture>`;
     });
 
-    // 将 prism-theme.css 和 js 原样复制到输出目录
+    // 将资源文件原样复制到输出目录
     eleventyConfig.addPassthroughCopy('style/prism-theme.css');
     eleventyConfig.addPassthroughCopy({ 'js': 'js' });
+    eleventyConfig.addPassthroughCopy({ 'assets': 'assets' });
 
     // 构建前编译 Sass
     eleventyConfig.on("beforeBuild", compileSass);
