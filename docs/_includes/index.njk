@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mantoujun12's Website</title>
-    <link rel="stylesheet" href="./style/style.css">
+    <title>{{ title or "mantoujun12's Website" }}</title>
+    <!-- 使用绝对路径，部署后从站点根目录解析 -->
+    <link rel="stylesheet" href="/style/style.css">
     <link href="https://fontsapi.zeoseven.com/161/main/result.css" onload="this.rel='stylesheet'" rel="preload"
         as="style" crossorigin />
     <noscript>
@@ -13,7 +14,7 @@
     </noscript>
     <link rel="stylesheet" href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
-
+    {{ style | safe }}
     </style>
 </head>
 
@@ -24,7 +25,7 @@
         <div class="nav-title">个人网站</div>
         <nav>
             <div class="nav-btns">
-                <a href="">首页</a>
+                <a href="/">首页</a>
                 <a href="">文章</a>
                 <a href="">图文</a>
                 <a href="">分区</a>
@@ -35,8 +36,7 @@
         <label for="nav-toggle" class="nav-overlay"></label>
     </header>
     <article>
-        <h1>首页</h1>
-        <p>只是一个个人网站的首页，你可以寻找一些内容</p>
+        {{ content | safe }}
     </article>
     <footer>
         <p>MIT &copy; <a href="https://github.com/mantoujun12" title="访问 Github 主页">mantoujun12</a></p>

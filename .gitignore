@@ -20,7 +20,9 @@ Gemfile.lock
 # Node
 node_modules/
 
-# Eleventy
+# Eleventy build output
+_site/
+pages/
 .eleventyignore
 
 # Other
