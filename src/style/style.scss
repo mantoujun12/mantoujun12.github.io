@@ -158,6 +158,11 @@ footer {
 
 /* ==================== 移动端适配 ==================== */
 
+/* 默认隐藏移动端专用文本 */
+.mobile-only {
+    display: none;
+}
+
 @media (max-width: 768px) {
 
     /* 汉堡菜单 */
@@ -214,6 +219,11 @@ footer {
 
     #nav-toggle:checked~.nav-overlay {
         display: block;
+    }
+
+    /* 移动端显示 GitHub 项目文本 */
+    .mobile-only {
+        display: inline;
     }
 
     /* 卡片 2 列 */

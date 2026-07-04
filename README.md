@@ -4,10 +4,10 @@
 [![License](https://img.shields.io/github/license/mantoujun12/mantoujun12.github.io)](https://github.com/mantoujun12/mantoujun12.github.io/blob/main/LICENSE)
 [![Stars](https://img.shields.io/github/stars/mantoujun12/mantoujun12.github.io?style=social)](https://github.com/mantoujun12/mantoujun12.github.io)
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat&logo=html5&logoColor=white)](https://developer.mozilla.org/docs/Web/HTML)
-[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
+[![SCSS](https://img.shields.io/badge/SCSS-CC6699?style=flat&logo=sass&logoColor=white)](https://sass-lang.com/)
 [![Eleventy](https://img.shields.io/badge/Eleventy-000000?style=flat&logo=eleventy&logoColor=white)](https://www.11ty.dev)
 
-[中文](docs/README_zh-cn.md)
+[简体中文](docs/README_zh-cn.md)
 
 Hi there! This is my personal website, built from scratch as my very first web project.
 
@@ -17,7 +17,7 @@ A static personal site hosted on GitHub Pages, crafted with vanilla HTML/CSS and
 
 ## Tech Stack
 
-- **HTML5 / CSS3** — Core structure and styling
+- **HTML5 / SCSS** — Core structure and styling
 - **JavaScript** — Lightweight interactions
 - **Eleventy** — Static site generation
 - **GitHub Actions** — Automated deployment
@@ -36,14 +36,27 @@ npm run serve
 npm run build
 ```
 
+## Project Packages
+
+| Package | Version | Description |
+|---------|---------|-------------|
+| `@11ty/eleventy` | ^2.0.1 | Static site generator |
+| `@11ty/eleventy-img` | ^6.0.4 | Image optimization |
+| `@11ty/eleventy-plugin-syntaxhighlight` | ^5.0.2 | Code syntax highlighting |
+| `autoprefixer` | ^10.5.2 | CSS autoprefixer |
+| `postcss` | ^8.5.16 | CSS post-processor |
+| `sass` | ^1.101.0 | SCSS compiler |
+
 ## Project Structure
 
 ```
-├── docs/               # Source content (Markdown & templates)
-│   ├── _includes/      # Layouts and partials
-│   └── docs.json       # Directory-level data (permalink, layout)
-├── pages/              # Build output (git-ignored)
-├── style/              # CSS stylesheets
+├── src/                # Source content (input directory for Eleventy)
+│   ├── _includes/      # Layouts and partials (Nunjucks templates)
+│   ├── _data/          # Global data files
+│   ├── style/          # SCSS stylesheets (compiled to _site/style/)
+│   ├── js/             # JavaScript files (copied to _site/js/)
+│   └── src.json        # Directory-level data (permalink, layout)
+├── _site/              # Build output (git-ignored)
 ├── .eleventy.js        # Eleventy configuration
 └── .github/workflows/  # CI/CD pipeline
 ```
