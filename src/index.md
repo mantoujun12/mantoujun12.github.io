@@ -1,6 +1,5 @@
 ---
 title: 首页
-layout: index.njk
 ---
 
 # 首页

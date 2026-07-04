@@ -20,35 +20,11 @@
 </head>
 
 <body>
-    <header>
-        <input type="checkbox" id="nav-toggle" hidden>
-        <label for="nav-toggle" class="nav-hamburger"><i class="fa-solid fa-bars"></i></label>
-        <div class="nav-title"><i class="fa-solid fa-face-smile"></i></div>
-        <nav>
-            <div class="nav-btns">
-                <a href="/">首页</a>
-                <a href="">文章</a>
-                <a href="">图文</a>
-                <a href="">分区</a>
-                <a href="https://github.com/mantoujun12/mantoujun12.github.io" title="此 GitHub 项目"><i
-                        class="fa-brands fa-github"></i></a>
-            </div>
-        </nav>
-        <label for="nav-toggle" class="nav-overlay"></label>
-    </header>
+    {% include "header.njk" %}
     <article>
         {{ content | safe }}
     </article>
-    <footer>
-        <p>MIT &copy; <a href="https://github.com/mantoujun12" title="访问 Github 主页">mantoujun12</a></p>
-        <span>
-            <a href="https://www.douyin.com/user/MS4wLjABAAAAtmK1B7sTyq88WZrWQltiwKoROqN0xcJsDpiHU1rT4c1Gz54z8Scuxw0eLG6bMN0-"
-                title="抖音主页"><i class="fa-brands fa-tiktok"></i></a>
-            <a href="https://space.bilibili.com/3546769845651673" title="BiliBili 主页"><i
-                    class="fa-brands fa-bilibili"></i></a>
-            <a href="https://github.com/mantoujun12/mantoujun12.github.io"><i class="fa-brands fa-github"></i></a>
-        </span>
-    </footer>
+    {% include "footer.njk" %}
 </body>
 
 </html>
