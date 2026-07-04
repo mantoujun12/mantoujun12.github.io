@@ -2,11 +2,13 @@
     "name": "mantoujun12.github.io",
     "version": "1.0.0",
     "description": "Personal website",
+    "author": "mantoujun12",
     "scripts": {
         "build": "npx @11ty/eleventy",
         "watch": "npx @11ty/eleventy --watch",
         "serve": "npx @11ty/eleventy --serve"
     },
+    "license": "MIT",
     "devDependencies": {
         "@11ty/eleventy": "^2.0.1"
     },
