@@ -2,7 +2,7 @@
  * Eleventy 配置文件
  *
  * 目录结构说明：
- *   docs/           → 输入目录（Markdown 源文件 + 模板）
+ *   src/           → 输入目录（Markdown 源文件 + 模板）
  *   _site/          → 输出目录（构建产物，git-ignored）
  *   style/          → Sass 源文件，编译后输出到 _site/style/style.css
  *   style/prism-theme.css → 语法高亮主题，通过 passthrough 直接复制
@@ -80,10 +80,13 @@ module.exports = function (eleventyConfig) {
 
     return {
         dir: {
-            input: 'docs',           // 源文件目录
+            input: 'src',           // 源文件目录
             output: '_site',         // 构建输出目录
-            includes: '_includes'    // 模板布局目录（相对于 input）
+            includes: '_includes',    // 模板布局目录（相对于 input）
+            data: '_data'
         },
-        markdownTemplateEngine: 'njk'  // Markdown 中可以使用 Nunjucks 语法
+        markdownTemplateEngine: 'njk',  // Markdown 中可以使用 Nunjucks 语法
+        htmlTemplateEngine: "njk",
+        templateFormats: ["njk", "html", "md"]
     };
 };

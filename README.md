@@ -7,6 +7,8 @@
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat&logo=css3&logoColor=white)](https://developer.mozilla.org/docs/Web/CSS)
 [![Eleventy](https://img.shields.io/badge/Eleventy-000000?style=flat&logo=eleventy&logoColor=white)](https://www.11ty.dev)
 
+[中文](docs/README_zh-cn.md)
+
 Hi there! This is my personal website, built from scratch as my very first web project.
 
 ## About
