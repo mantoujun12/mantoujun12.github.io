@@ -1,6 +1,5 @@
 ---
 title: 文章测试
-layout: main.njk
 ---
 
 {% from "card.njk" import card %}
