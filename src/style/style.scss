@@ -86,11 +86,13 @@ header {
 
 /* 侧边栏遮罩 */
 .nav-overlay {
-    display: none;
     position: fixed;
     inset: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(0, 0, 0, 0);
     z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease, background-color 0.3s ease;
 }
 
 /* ==================== 主内容区 ==================== */
@@ -221,7 +223,9 @@ footer {
     }
 
     #nav-toggle:checked~.nav-overlay {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+        background: rgba(0, 0, 0, 0.3);
     }
 
     /* 移动端显示 GitHub 项目文本 */
